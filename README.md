@@ -10,7 +10,7 @@ Web gourmet para una hamburguesería: menú con carrito, pedido por WhatsApp y u
 ## Ejecutar
 
 ```
-node server.js
+node dev-server.js
 ```
 
 Luego abre http://localhost:5173. También puedes abrir `index.html` directamente.

@@ -1,5 +1,5 @@
 /* Servidor estático mínimo para desarrollo (sin dependencias).
-   Uso:  node server.js   ->  http://localhost:5173            */
+   Uso:  node dev-server.js   ->  http://localhost:5173            */
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
