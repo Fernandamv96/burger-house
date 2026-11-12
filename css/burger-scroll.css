@@ -9,7 +9,8 @@
   border-block: 1px solid var(--line);
 }
 /* La altura extra define cuánto scroll dura la animación (la activa el JS) */
-.anatomy.is-scrolly { height: 520vh; }
+.anatomy { --scroll-vh: 700vh; }
+.anatomy.is-scrolly { height: var(--scroll-vh); }
 
 .anatomy__sticky {
   position: sticky;
@@ -150,7 +151,7 @@
 
 /* ---------- Móvil: el paso va debajo de la hamburguesa ---------- */
 @media (max-width: 820px) {
-  .anatomy.is-scrolly { height: 420vh; }
+  .anatomy { --scroll-vh: 560vh; }
   .anatomy__head { left: 0; right: 0; text-align: center; top: calc(var(--header-h) + 0.6rem); }
   .scene { grid-template-columns: 1fr; justify-items: center; gap: 1.2rem; margin-top: 4.5rem; }
   .stage { width: min(88vw, 44svh * var(--ratio)); }

@@ -44,6 +44,16 @@
     stage.style.setProperty('--ratio', seq.width / seq.height);
     renderScene(framesBox, stepsBox);
 
+    // Largo del scroll según el tamaño de pantalla (controla la velocidad)
+    const mobileQuery = window.matchMedia('(max-width: 820px)');
+    const applyScrollLength = () =>
+      section.style.setProperty('--scroll-vh', `${mobileQuery.matches ? seq.scrollVh.mobile : seq.scrollVh.desktop}vh`);
+    applyScrollLength();
+    mobileQuery.addEventListener('change', () => {
+      applyScrollLength();
+      if (window.ScrollTrigger) ScrollTrigger.refresh();
+    });
+
     // Sin GSAP queda la hamburguesa armada y la página sigue funcionando
     if (!window.gsap || !window.ScrollTrigger) return;
 

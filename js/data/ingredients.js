@@ -14,6 +14,9 @@ BH.burgerSequence = {
   frames: 9,
   assembledFrame: 7, // hamburguesa completa
   finalFrame: 8, // completa con destellos
+  // Largo del scroll de la animación, en % de la altura de pantalla.
+  // Más alto = animación más lenta. Escritorio: 700 · Móvil: 560
+  scrollVh: { desktop: 700, mobile: 560 },
 };
 
 /* Cada paso corresponde al fotograma donde aparece el ingrediente */
